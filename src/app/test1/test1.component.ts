@@ -6,12 +6,20 @@ import { Component, EventEmitter, Input, Output} from '@angular/core';
   styleUrls: ['./test1.component.css']
 })
 export class Test1Component {
-  constructor() { }
+  
 
   @Input ('status') statusTest: string='working';
 
+  @Output('onSendData') sendData = new EventEmitter(null);
 
- 
+  constructor() {}
 
-  onClickTest(event:any){}
+  onClickTest(event: any) {
+    console.log('EVENT CLICK:', event);
+
+    this.sendData.emit({
+      name: 'paolo',
+      status: 'busy'
+    });
+  }
 }
