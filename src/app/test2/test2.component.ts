@@ -9,7 +9,18 @@ export class Test2Component implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+ myvar1 = 'Josue';
+ myvar2 = 'Romero';
+ test0(event){
+   console.log('nombre completo:', this.myvar1+' '+this.myvar2);
+  
+
+ }
+
+ test1(event){
+   console.log(event);
+
+
+ }
 
 }
