@@ -5,3 +5,8 @@
 (onSendData)="printDataRicardoComp($event)">
 </comp1-test1>
 <comp2-test2></comp2-test2>
+<button (click) ="sw=!sw">Show test 3</button>
+<div *ngIf="sw">
+<input type="text"[(ngModel)]="myStatus">
+<app-test3 [name]="myStatus"></app-test3>
+</div>
