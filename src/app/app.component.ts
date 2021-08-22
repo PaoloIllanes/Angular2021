@@ -44,8 +44,11 @@ export class AppComponent {
     console.log('PERSON A SE DESUSCRIBE')
  }
   printData(event:any){
-    console.log('RICARDO COMP:', event);
+    console.log('COMP:', event);
   }  
 
+  test(event){
+    console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAA', event);
+  }
   
 }
