@@ -51,4 +51,7 @@ export class AppComponent {
     console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAA', event);
   }
   
+  test100(event){
+    console.log('234234234234234', event);
+  }
 }
