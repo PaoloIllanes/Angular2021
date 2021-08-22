@@ -10,3 +10,35 @@
 <input type="text"[(ngModel)]="myStatus">
 <app-test3 [name]="myStatus"></app-test3>
 </div>
+
+<div  [hidden]="sw">
+  <app-test3 
+  [name]="myStatus">
+  </app-test3>
+</div>
+
+<p>----------------------</p>
+  <span *ngFor="let item of ['first', 'second', 'thrid']; let i = index;">
+    <comp1-test1
+    *ngIf="item !== 'first'"
+    [status]="item" 
+    (onSendData)="printDataRicardoComp($event)">
+    </comp1-test1>
+  </span>
+  <p>-------------------------------</p>
+
+<input type="text" [(ngModel)]="color">
+<ul [ngSwitch]="color">
+  <li *ngSwitchCase="'red'">
+  <comp1-test1
+    [status]="color" 
+    (onSendData)="printDataRicardoComp($event)">
+    </comp1-test1>
+  </li>
+  <li *ngSwitchCase="'yellow'">
+  <app-test3 
+  [name]="clor">
+  </app-test3></li>
+  <li *ngSwitchCase="'green'">green</li>
+  <li *ngSwitchDefault>Default Orange</li>
+</ul>
