@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Buy1Component } from '../home/buy1/buy1.component';
-import { Buy2Component } from '../home/buy2/buy2.component';
+import { Buy1Component } from '../buy/buy1/buy1.component';
+import { Buy2Component } from '../buy/buy2/buy2.component';
 import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({

@@ -15,6 +15,13 @@ import { SharedModule } from '../../shared/shared.module';
     Admin1Component,
     Admin2Component
 
+
+  ],
+  
+  
+  exports: [
+    Admin1Component
+
   ]
 })
 export class AdminModule { }
