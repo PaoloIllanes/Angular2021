@@ -1,4 +1,16 @@
-<div style="border: 5px yellow solid">admin 1 comp
+<div style="border: 5px yellow solid">
+  admin 1 comp
+<p>{{name}}</p>
+<p>{{name | uppercase}}</p>
+<p>{{'PAOLO' | lowercase}}</p>
+<p>{{['a','b','c','d','e'] | slice:2:4}}</p>
+<p>{{auxJson | json}}</p>
+
 <app-loader></app-loader>
 <app-card></app-card>
 </div>
+<button (click)="onAdd()">add</button>
+<p *ngFor="let item of auxObs$ | async">
+{{item}}
+</p>
+<p>{{2 | exponent}}</p>

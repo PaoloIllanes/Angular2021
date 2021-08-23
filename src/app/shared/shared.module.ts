@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Pipe } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from './card/card.component';
 import { LoaderComponent } from './loader/loader.component';
+import { ExponentPipe } from './exponent.pipe';
 
 @NgModule({
   imports: [
@@ -9,12 +10,14 @@ import { LoaderComponent } from './loader/loader.component';
   ],
   declarations: [
     CardComponent,
-    LoaderComponent
+    LoaderComponent,
+    ExponentPipe
   ]
   ,
   exports:[
     CardComponent,
-    LoaderComponent
+    LoaderComponent,
+    ExponentPipe
   ]
 })
 export class SharedModule { }
