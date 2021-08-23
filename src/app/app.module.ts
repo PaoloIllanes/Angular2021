@@ -17,7 +17,6 @@ import { PersonasComponent } from './personas/personas.component';
     FormsModule,
    
   
-  
   ],
   providers: [],
   bootstrap: [AppComponent]
