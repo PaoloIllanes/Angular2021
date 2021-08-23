@@ -1,14 +1,43 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'Persona',
-  template
+  template: `
+  <div [style.background]="vaccined === 0 ? 'red' : 'green'"
+       style="float: left; margin: 10px; padding: 10px;">
+
+	  <p>Nombre: {{name | uppercase}}</p>
+    <p>fecha: {{date}}</p>
+	  <p>Edad: {{age}}</p>
+    <p>Enfermedad base: {{disease}}</p>
+    <p>TIpo de vacuna: {{vaccinetype}}</p>
+    <p>vacunado: {{vaccined}}</p>
+    <p>Dosis: {{doses}}</p>
+	  
+	  <button *ngIf="vaccinated===0" 
+            (click)="onVacunar()"
+            [disabled]="age < 18 || disease">
+      Vacunar
+    </button>
+  </div>
+  `
 })
-export class PersonasComponent implements OnInit {
+export class PersonasComponent {
+
+  @Input() name: string;
+  @Input() date: string;
+  @Input() age : number;
+  @Input() disease: boolean;
+  @Input() vaccinetype: string;
+  @Input() vaccined : number;
+  @Input() doses : number;
+  @Output() vacunar = new EventEmitter();
 
   constructor() { }
 
-  ngOnInit() {
+
+  onVacunar() {
+    this.vacunar.emit();
   }
 
 }

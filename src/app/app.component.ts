@@ -31,6 +31,10 @@ export class AppComponent {
   constructor(){
 
   }
+  verifyVacunados() {
+    const novacunados = this.personas.novacunados.filter(p => p.age < 18 && p.disease);
+    return novacunados.length === 0;
+  }
   
   }
 
