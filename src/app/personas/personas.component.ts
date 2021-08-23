@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 	  <p>Nombre: {{name | uppercase}}</p>
 
-    <p>fecha: {{date | shortdate}}</p>
+    <p>fecha: {{date | date: 'ddMMyyyy'}}</p>
 	  <p>Edad: {{age}}</p>
     <p>Enfermedad base: {{disease}}</p>
     <p>TIpo de vacuna: {{vaccinetype}}</p>
@@ -19,7 +19,7 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
             (click)="onVacunar()"
             [disabled]="age < 18 || disease">
 
-            
+
       Vacunar
     </button>
   </div>
