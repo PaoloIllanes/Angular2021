@@ -4,7 +4,6 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
 
@@ -32,9 +31,10 @@ export class AppComponent {
 
   }
   verifyVacunados() {
-    const novacunados = this.personas.novacunados.filter(p => p.age < 18 && p.disease);
+    const novacunados = this.personas.novacunados.filter(p => p.age < 18 || p.disease);
     return novacunados.length === 0;
   }
+  vacunar(){}
   
   }
 

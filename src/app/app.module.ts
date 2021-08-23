@@ -15,6 +15,7 @@ import { PersonasComponent } from './personas/personas.component';
   imports: [
     BrowserModule,
     FormsModule,
+   
   
   
   ],

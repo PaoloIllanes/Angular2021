@@ -10,6 +10,30 @@ TODOS VACUNADOS
 
 <p>VACUNADOS</p>
 <div style="display: flex; flexDirection: row;">
+<div *ngFor="let persona of personas.vacunados">
+<persona 
+[name]="persona.name"
+[age]="persona.age"
+[date]="persona.date"
+[vaccined]="persona.vaccined"
+></persona>
+</div>
+
+</div>
+<p>NO VACUNADOS</p>
+	<div style="display: flex; flexDirection: row;">
+		<div *ngFor="let persona of personas.novacunados">
+			<persona
+       [age]="persona.age"
+       [name]="persona.name"
+       [date]="persona.date"
+       [disease]="persona.disease"
+       [vaccineType]="persona.vaccineType">
+      </persona>
+		</div>
+
+
+
 
 
 

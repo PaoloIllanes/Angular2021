@@ -1,7 +1,7 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
-  selector: 'Persona',
+  selector: "persona",
   template: `
   <div [style.background]="vaccined === 0 ? 'red' : 'green'"
        style="float: left; margin: 10px; padding: 10px;">
@@ -28,7 +28,7 @@ export class PersonasComponent {
   @Input() date: string;
   @Input() age : number;
   @Input() disease: boolean;
-  @Input() vaccinetype: string;
+  @Input() vaccineType: string;
   @Input() vaccined : number;
   @Input() doses : number;
   @Output() vacunar = new EventEmitter();
