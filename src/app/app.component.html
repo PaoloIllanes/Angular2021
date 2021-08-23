@@ -17,23 +17,7 @@ TODOS VACUNADOS
 [date]="persona.date"
 [vaccined]="persona.vaccined"
 >
-<div [style.background]="vaccined === 0 ? 'red' : 'green'"
-       style="float: left; margin: 10px; padding: 10px;">
 
-	  <p>Nombre: {{name | uppercase}}</p>
-    <p>fecha: {{date}}</p>
-	  <p>Edad: {{age}}</p>
-    <p>Enfermedad base: {{disease}}</p>
-    <p>TIpo de vacuna: {{vaccinetype}}</p>
-    <p>vacunado: {{vaccined}}</p>
-    <p>Dosis: {{doses}}</p>
-	  
-	  <button *ngIf="vaccinated===0" 
-            (click)="onVacunar()"
-            [disabled]="age > 18 || disease">
-      Vacunar
-    </button>
-  </div>
 </persona>
 </div>
 

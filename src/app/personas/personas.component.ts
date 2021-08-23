@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
        style="float: left; margin: 10px; padding: 10px;">
 
 	  <p>Nombre: {{name | uppercase}}</p>
-    <p>fecha: {{date}}</p>
+    <p>fecha: {{date | shortdate}}</p>
 	  <p>Edad: {{age}}</p>
     <p>Enfermedad base: {{disease}}</p>
     <p>TIpo de vacuna: {{vaccinetype}}</p>
@@ -24,16 +24,17 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
 })
 export class PersonasComponent {
 
-  @Input() name: string;
-  @Input() date: string;
+  @Input()name: string;
+  @Input() date:string;
   @Input() age : number;
   @Input() disease: boolean;
   @Input() vaccineType: string;
-  @Input() vaccined : number;
+  @Input() vaccined: number;
   @Input() doses : number;
   @Output() vacunar = new EventEmitter();
 
-  constructor() { }
+  constructor() { 
+   }
 
 
   onVacunar() {
