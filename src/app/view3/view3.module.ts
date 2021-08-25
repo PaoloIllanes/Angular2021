@@ -8,8 +8,11 @@ const routes: Routes=[
   {path:'', redirectTo: 'view3sub1', pathMatch:'full'
 
    },
-{path: 'view3sub1', component: View3sub1Component},
-{}
+{path: 'view3sub1', component: View3sub1Component, children: [
+  {
+    path: 'view3sub2sub1', component: View3sub2Component
+  }
+]}
 
 ]
 

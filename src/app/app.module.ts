@@ -17,7 +17,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { View2Component } from './view2/view2.component';
 import { View1sub1Component } from './view1/view1sub1/view1sub1.component';
 import { View1sub2Component } from './view1/view1sub2/view1sub2.component';
-import { View3Component } from './view3/view3.component';
+
 
  const routes: Routes=[
    {path:'', redirectTo: 'view1', pathMatch:'full'
@@ -50,7 +50,7 @@ import { View3Component } from './view3/view3.component';
 
 },
 {
-  path: 'view3', loadChildren: () => import('./view3/view3.module')
+  path: 'view3', loadChildren: () => import('./view3/view3.module').then(m => m.View3Module)
 }];
 
 @NgModule({
@@ -63,7 +63,7 @@ import { View3Component } from './view3/view3.component';
     Directive2Directive,
     View1Component,
     View2Component,
-    View3Component,
+
     View1sub1Component,
     View1sub2Component,
   ],
