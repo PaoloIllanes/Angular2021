@@ -45,7 +45,7 @@ import { View1sub2Component } from './view1/view1sub2/view1sub2.component';
  ,{
 
 
- path: 'view2', component: View2Component,
+ path: 'view2:id', component: View2Component,
 
 
 },
