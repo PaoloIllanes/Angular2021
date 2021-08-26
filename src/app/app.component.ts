@@ -15,7 +15,7 @@ id:number=44
 constructor(private router: Router){}
 
 onGoViewFromTS():void{
-  this.router.navigate(['view2',this.id]);
+  this.router.navigate(['view2',this.id, 'sub', 33333]);
   };
 
 
