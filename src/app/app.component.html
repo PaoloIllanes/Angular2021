@@ -1,20 +1,2 @@
 <p>APP</p>
-<p>{{[1,2,3,4,5,6,7,8,9,] | pure}}</p>
-<p>{{[1,2,3,4,5,6,7,8,9,] | impure}}</p>
 
-
-<button (click)="onGoViewFromTS()">go to view 2</button>
-
-<button routerLink ="view1" 
-  routerLinkActive="active-router">view1</button>
-  <button routerLink ="view3" 
-  routerLinkActive="active-router">view3</button>
-  <button routerLink="view2/5/sub/34"
-  [queryParams]="{name: 'Paolo', lastName: 'Illanes'}"
-  routerLinkActive="active-router">view2</button>
-
-  <div style="border: 4px red solid">
-  <router-outlet>
-
-</router-outlet>
-  </div>

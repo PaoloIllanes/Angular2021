@@ -9,15 +9,10 @@ import { filter, map, delay } from 'rxjs/operators';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-id:number=44
+
 
 
 constructor(private router: Router){}
-
-onGoViewFromTS():void{
-  this.router.navigate(['view2',this.id, 'sub', 33333],
-  {queryParams : {name: 'juan', lastName: 'perez'}})
-  };
 
 
   
