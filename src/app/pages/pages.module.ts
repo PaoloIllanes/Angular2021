@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { PagesComponent } from './pages.component';
 
 const routes : Routes =[
   {path:'',redirectTo:'home', pathMatch : 'full'},
@@ -16,6 +17,6 @@ import('./home/home.module').then(m =>m.HomeModule)},
     CommonModule,
     RouterModule.forChild(routes)
   ],
-  declarations: []
+  declarations: [PagesComponent]
 })
 export class PagesModule { }
