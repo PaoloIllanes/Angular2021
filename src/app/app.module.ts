@@ -5,6 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { SingletonService } from './login/services/singleton.service';
+
 
 
 const routes : Routes =[
@@ -24,7 +26,7 @@ const routes : Routes =[
     FormsModule,
     RouterModule.forRoot(routes),
   ],
-  providers: [],
+  providers: [SingletonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

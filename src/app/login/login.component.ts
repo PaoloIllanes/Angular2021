@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NormalService } from './services/normal.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private normalService: NormalService) { }
 
   ngOnInit() {
+  }
+  getData(){
+    console.log(this.normalService.getData())
+
+  }
+  setData(data: number[]){
+    this.normalService.setData(data);
   }
 
 }
