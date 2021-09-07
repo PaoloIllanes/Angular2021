@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NormalService } from './services/normal.service';
+import { PublicationService } from './services/publication.service';
 
 const routes: Routes=[
   {path: '' , component: LoginComponent}
@@ -21,7 +22,8 @@ const routes: Routes=[
     
   ],
   providers: [
-    NormalService
+    NormalService,
+    PublicationService
    
       
   ]

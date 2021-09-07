@@ -1,0 +1,28 @@
+{
+  "publications": {
+    "p001":{
+      "id":2,
+      "description":"sadsadsad",
+      "date": "11/121/21",
+      "imgURL":"sdsadsadsadsad"
+
+
+    },
+    "p002":{
+      "id":2,
+      "description":"sadsadsad",
+      "date": "11/121/21",
+      "imgURL":"sdsadsadsadsad"
+
+
+    },
+    "p003":{
+      "id":2,
+      "description":"sadsadsad",
+      "date": "11/121/21",
+      "imgURL":"sdsadsadsadsad"
+
+
+    }
+  }
+}
