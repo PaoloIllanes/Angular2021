@@ -14,3 +14,5 @@ export class AppComponent {
    this.publicationService.getVaccinated().subscribe(s=>(console.log(s)))
  }
 }
+
+
