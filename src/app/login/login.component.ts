@@ -27,7 +27,6 @@ formReactive: FormGroup;
         lastName: ['', [Validators.required]],
         date: ''
       });
-
      }
 
   ngOnInit() {
