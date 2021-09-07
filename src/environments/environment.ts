@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   app:{
-    apiBaseURL:"https://angular-facebook-ill-default-rtdb.firebaseio.com"
+    apiBaseURL:"https://vaccines-test-default-rtdb.firebaseio.com/"
   }
 };
 
