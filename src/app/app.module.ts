@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { PersonaComponent } from './persona/persona.component';
+import { PublicationService } from './services/publication.service';
 
 
 
@@ -14,17 +16,18 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PersonaComponent
+  
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-
     HttpClientModule,
-    ReactiveFormsModule
+
   ],
-  providers: [],
+  providers: [PublicationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

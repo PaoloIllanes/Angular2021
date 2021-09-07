@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   app:{
-    apiBaseURL:"https://vaccines-test-default-rtdb.firebaseio.com/"
+    vaccinated:"https://vaccines-test-default-rtdb.firebaseio.com/vaccinated",
+    unvaccinated:"https://vaccines-test-default-rtdb.firebaseio.com/unvaccinated"
   }
 };
 

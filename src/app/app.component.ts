@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PublicationService } from './services/publication.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'AngularCourse2021';
+ constructor(private publicationService: PublicationService){}
+
+
+ getAllVacinated(){
+   this.publicationService.getVaccinated().subscribe(s=>(console.log(s)))
+ }
 }

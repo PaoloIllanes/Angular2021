@@ -1,1 +1,16 @@
-hola
+<div>
+<!--4. Si todas las personas están vacunadas mostrar un mensaje EVERYBODY VACCINATED -->
+<p *ngIf="verifyVacunados()">
+TODOS VACUNADOS
+</p>
+
+<p>Medical center</p>
+<p>VACUNADOS {{persona.vacunados.length}}</p>
+<p>SIN VACUNAR {{persona.novacunados.length}}</p>
+
+<p>VACUNADOS</p>
+<div style="display: flex; flexDirection: row;">
+<div *ngFor="let p of persona.vaccined">
+<app-persona >
+
+</app-persona>
