@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { PublicationService } from '../services/publication.service';
 
 @Component({
   selector: 'app-persona',
@@ -14,7 +16,7 @@ import { Component, OnInit } from '@angular/core';
     <p>Vaccined: {{vaccined}}</p>
     <p>Doses: {{doses}}</p>
 	  
-	  <button *ngIf="vaccinated===0" 
+	  <button *ngIf="vaccined===0" 
             (click)="onVacunar()"
             [disabled]="age < 18 || disease">
 
@@ -32,9 +34,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonaComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit() {
-  }
 
+
+  constructor(private publicationService: PublicationService) { }
+
+ 
+  
+
+ngOnInit(): void {
+}
+@Input()name: string;
+  @Input() date:string;
+  @Input() age : number;
+  @Input() disease: boolean;
+  @Input() vaccineType: string;
+  @Input() vaccined: number;
+  @Input() doses : number;
+
+  
 }
