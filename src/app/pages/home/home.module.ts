@@ -12,6 +12,6 @@ const routes: Routes=[
   imports: [
     CommonModule
   ],
-  declarations: []
+  declarations: [HomeComponent]
 })
 export class HomeModule { }

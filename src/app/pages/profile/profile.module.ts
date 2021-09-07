@@ -13,6 +13,6 @@ const routes: Routes=[
     CommonModule,
     RouterModule.forChild(routes)
   ],
-  declarations: []
+  declarations: [ProfileComponent]
 })
 export class ProfileModule { }
