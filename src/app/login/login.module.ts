@@ -5,6 +5,7 @@ import { LoginComponent } from './login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NormalService } from './services/normal.service';
 import { PublicationService } from './services/publication.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes=[
   {path: '' , component: LoginComponent}
@@ -15,7 +16,9 @@ const routes: Routes=[
   imports: [
     CommonModule,
     NgbModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     LoginComponent,
@@ -23,7 +26,8 @@ const routes: Routes=[
   ],
   providers: [
     NormalService,
-    PublicationService
+    PublicationService,
+   
    
       
   ]

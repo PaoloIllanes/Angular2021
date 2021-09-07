@@ -5,18 +5,15 @@
 <button (click)="setData([2,2,2,2])">set data</button>
 <button routerlink="/pages/home"> go home </button>
 
-<p>TEMPLATE FORM</p>
-<form #formTemplate="ngForm"
-      (ngSubmit)="onSubmitTemplate(formTemplate)">
-  <input type="text" name="aagggg" ngModel>
-  <input type="text" name="bb" ngModel>
-  <input type="text" name="cc" ngModel>
- / <button type="submit">submit</button>
-</form>
+<p>---------REACTIVE FORMS------------------</p>
+
+<input type="text" [formControl]="name">
+<button (click)="onShow()">SHOW</button>
 
 
-<!--
-<input type="text"  [(ngModel)]="aaaaaaa">
-<input type="text"  [(ngModel)]="bbbbbbb">
-<input type="text"  [(ngModel)]="cccccccc">
-<button (click)="adasd()">submit</button>-->
+<div [formGroup]="formReactive">
+  <input type="text" formControlName="name">
+  <input type="text" formControlName="lastName">
+  <input type="text" formControlName="date">
+</div>
+<button (click)="onShowAll()">SHOW ALL</button>
