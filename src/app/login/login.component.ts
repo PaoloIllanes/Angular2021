@@ -16,14 +16,17 @@ formReactive: FormGroup;
   name = new FormControl('');
 
 
+
+
   constructor(
     private normalService: NormalService,
     private publicationService: PublicationService,
     private formBuilder: FormBuilder
+  
     ){
 
       this.formReactive = this.formBuilder.group({
-        name: '',
+        name: ['',[Validators.required,Validators.minLength(3)]],
         lastName: ['', [Validators.required]],
         date: ''
       });
@@ -52,6 +55,10 @@ formReactive: FormGroup;
   onShowAll(){
     console.log('DDDDD', this.formReactive.value)
   }
+getValue(value:string){
+  return this.formReactive.get(value);
 
+
+}
 
 }

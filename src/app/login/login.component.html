@@ -1,19 +1,14 @@
 
-<button>login1</button>
-<button (click)="getData()">get data</button>
-
-<button (click)="setData([2,2,2,2])">set data</button>
-<button routerlink="/pages/home"> go home </button>
-
-<p>---------REACTIVE FORMS------------------</p>
-
-<input type="text" [formControl]="name">
-<button (click)="onShow()">SHOW</button>
 
 
-<div [formGroup]="formReactive">
-  <input type="text" formControlName="name">
-  <input type="text" formControlName="lastName">
-  <input type="text" formControlName="date">
+<p>reactive form</p>
+
+<div [formGroup]=formReactive>
+  <label for="name"></label>
+  <label for="lastName"></label>
+<input type="text">
+<div >
+ERROR
 </div>
-<button (click)="onShowAll()">SHOW ALL</button>
+<input type="text">
+</div>
