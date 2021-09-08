@@ -22,7 +22,7 @@ const routes : Routes =[
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forChild(routes),
+    RouterModule.forRoot(routes),
     
   
   
