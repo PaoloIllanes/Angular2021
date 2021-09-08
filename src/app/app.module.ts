@@ -6,20 +6,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { SingletonService } from './login/services/singleton.service';
+import { LugarComponent } from './lugar/lugar.component';
+
 
 
 
 const routes : Routes =[
-  {path:'',redirectTo:'login',pathMatch:'full'},
-  {path:'login',loadChildren: () => import('./login/login.module').then(m=>m.LoginModule)},
-  {path:'pages',loadChildren: () => import('./pages/pages.module').then(m=>m.PagesModule)},
+  {path:'',redirectTo:'jurados',pathMatch:'full'},
+  {path:'jurados',loadChildren: () => import('./jurados/jurados.module').then(m=>m.JuradosModule)},
+  {path:'votacion',loadChildren: () => import('./votacion/votacion.module').then(m=>m.VotacionModule)},
+  {path: '', component: LugarComponent}
 
 ]
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LugarComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,7 @@ const routes : Routes =[
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [SingletonService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
