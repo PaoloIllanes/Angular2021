@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Angular2021": {
+    "AngularCourse2021": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Angular2021",
+            "outputPath": "dist/AngularCourse2021",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Angular2021:build:production"
+              "browserTarget": "AngularCourse2021:build:production"
             },
             "development": {
-              "browserTarget": "Angular2021:build:development"
+              "browserTarget": "AngularCourse2021:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Angular2021:build"
+            "browserTarget": "AngularCourse2021:build"
           }
         },
         "test": {
@@ -99,7 +99,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           }
@@ -107,5 +108,5 @@
       }
     }
   },
-  "defaultProject": "Angular2021"
+  "defaultProject": "AngularCourse2021"
 }

@@ -1,23 +1,10 @@
+import { Component } from '@angular/core';
 
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
-import {BehaviorSubject, of, Subscription} from 'rxjs';
-import { filter, map, delay } from 'rxjs/operators';
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template:'<router-outlet></router-outlet>',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
-
-
-constructor(private router: Router){}
-
-
-  
-  }
-
-  
-
-  
+  title = 'AngularCourse2021';
+}

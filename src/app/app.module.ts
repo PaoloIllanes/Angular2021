@@ -1,10 +1,13 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { SingletonService } from './login/services/singleton.service';
 
-import { RouterModule, Routes } from '@angular/router';
 
 
 const routes : Routes =[
@@ -16,18 +19,17 @@ const routes : Routes =[
 
 @NgModule({
   declarations: [
-    AppComponent,
-   
+    AppComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     RouterModule.forRoot(routes),
-    
-  
-  
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [SingletonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
