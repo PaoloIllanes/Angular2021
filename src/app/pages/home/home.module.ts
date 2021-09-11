@@ -5,7 +5,7 @@ import { HomeComponent } from './home.component';
 
 const routes: Routes=[
   {path: '' , component: HomeComponent}
-  
+
   ]
 
 @NgModule({
@@ -15,3 +15,4 @@ const routes: Routes=[
   declarations: [HomeComponent]
 })
 export class HomeModule { }
+
