@@ -5,8 +5,12 @@
 export const environment = {
   production: false,
   app:{
-    apiBaseURL:"https://angular-facebook-ill-default-rtdb.firebaseio.com"
-  }
+    apiBaseURL:"https://angular-facebook-ill-default-rtdb.firebaseio.com",
+   
+  },
+  auth:{ 
+    apiBaseUrl:"https://identitytoolkit.googleapis.com"
+    ,apiKey:"AIzaSyDJbZwvAZE64tl0GNoRqyZ0qG76DKCzZVc"}
 };
 
 /*
