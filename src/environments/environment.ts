@@ -3,12 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
+  production: true,
   app:{
     apiBaseURL:"https://angular-facebook-ill-default-rtdb.firebaseio.com",
-   
+
   },
-  auth:{ 
+  auth:{
     apiBaseUrl:"https://identitytoolkit.googleapis.com"
     ,apiKey:"AIzaSyDJbZwvAZE64tl0GNoRqyZ0qG76DKCzZVc"}
 };

@@ -6,7 +6,7 @@ import { environment } from '../../../environments/environment';
 @Injectable()
 export class PublicationService {
 
-url = environment.app
+url = environment.app.apiBaseURL
 
   constructor(private http:HttpClient) { }
  public getAll(): Observable<any>{
