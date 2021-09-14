@@ -6,7 +6,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { LoginModule } from './login/login.module';
 import { SingletonService } from './login/services/singleton.service';
+import { PagesModule } from './pages/pages.module';
 
 
 
@@ -27,7 +29,8 @@ const routes : Routes =[
     FormsModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LoginModule
   ],
   providers: [SingletonService],
   bootstrap: [AppComponent]
