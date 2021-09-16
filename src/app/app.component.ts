@@ -1,8 +1,5 @@
 
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
-import {BehaviorSubject, of, Subscription} from 'rxjs';
-import { filter, map, delay } from 'rxjs/operators';
 import { TransactionService } from '../services/transaction.service';
 import { WalletService } from '../services/wallet.service';
 @Component({
