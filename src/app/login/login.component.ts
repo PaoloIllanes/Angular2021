@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { RegisterComponent } from './components/register/register.component';
 import { AuthService } from './services/auth.service';
 import { NormalService } from './services/normal.service';
 import { PublicationService } from './services/publication.service';
@@ -23,7 +24,10 @@ formReactive: FormGroup;
     private normalService: NormalService,
     private publicationService: PublicationService,
     private formBuilder: FormBuilder,
-    private authService:AuthService
+    private authService:AuthService,
+    private matDialog:MatDialog,
+    private router: Router
+
   
     ){
 
@@ -48,8 +52,14 @@ submit(form:any){
     returnSecureToken: true
 
 
-  }).subscribe(res =>{console.log("response",res);})
+  }).subscribe(res =>{console.log("response",res);
+    this.router.navigate(['pages'])
+})
 
 }
+onCreteNewAccount(){
+  this.matDialog.open(RegisterComponent)
+}
+
 
 }

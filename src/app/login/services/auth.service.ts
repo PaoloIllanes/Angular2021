@@ -12,9 +12,15 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
 public login(body:any):Observable<any>{
-return this.http.post(`${this.url}/v1/accounts:signInWithPassword?key=${this.key}`,{})
+return this.http.post(`${this.url}/v1/accounts:signInWithPassword?key=${this.key}`,body).
+pipe(map((res:any)=>{return res}))
 
 }
-
-
+public signUp(body:any){
+  return  this.http.post(`${this.url}/v1/accounts:signUp?key=${this.key}`,body)
+}
+private authSucces(token:string,userID:string){
+  localStorage.setItem('token',token);
+  localStorage.setItem('userID',userID)
+}
 }
