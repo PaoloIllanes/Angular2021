@@ -1,7 +1,8 @@
 
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { TransactionService } from '../services/transaction.service';
-import { WalletService } from '../services/wallet.service';
+import { TransactionService } from './services/transaction.service';
+import { WalletService } from './services/wallet.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -31,18 +32,7 @@ export class AppComponent {
     this.walletService.update(walletFROM.id, walletFROM).subscribe(res => this.loadWallets());
     this.walletService.update(walletTO.id, walletTO).subscribe(res => this.loadWallets());
 
-    /*forkJoin(
-      this.walletService.update(walletFROM.id, walletFROM),
-      this.walletService.update(walletTO.id, walletTO)
-    ).pipe(
-      exhaustMap(res => {
-        console.log('RES EXHA', res);
-        return this.transactionService.delete(transaction.id)
-      })
-    ).subscribe(res => {
-      console.log('FORK JOIN', res)
-      //this.transactionService.delete(transaction.id).subscribe(() => this.loadTransactions())
-    })*/
+
 
   }
 
@@ -54,13 +44,12 @@ export class AppComponent {
   getTotalCoin(type: string): number {
     return this.wallets.reduce((acc, value) => acc + (value[type] > 0 ? value[type] : 0), 0);
   }
-
+//1. Listar las transacciones y las billeteras (utilizar método GET)
   loadTransactions(): void {
     this.transactionService.getAll().subscribe(res =>
       this.transactions = Object.entries(res).map((s: any) => ({id: s[0], ...s[1]}))
     );
   }
-
   loadWallets(): void {
     this.walletService.getAll().subscribe(res =>
       this.wallets = Object.entries(res).map((s: any) => ({id: s[0], ...s[1]}))
