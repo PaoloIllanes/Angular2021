@@ -20,7 +20,9 @@ export class AppComponent {
     this.loadWallets();
     this.loadTransactions();
   }
-
+  /*5. Cuando se hace click en mine se debe adicionar y restar el monto según al tipo de moneda y aumentar o reducir a la 
+  dirección de wallet correspondiente (utilizar método PUT or PATCH para actualizar la wallet, y DELETE para eliminar la 
+  transaccion)*/
   onMine(transaction: any): void {
     const walletFROM = this.wallets.find(w => w.wallet === transaction.from);
     const walletTO = this.wallets.find(w => w.wallet === transaction.to);

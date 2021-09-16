@@ -1,7 +1,9 @@
+ <!--2. Las billeteras deben ser de color café si el monto total es superior a 7 sin importar el tipo de moneda y de color gray si tiene 
+un monto total menor a 1-->
 <div style="border: 1px solid green;"
      [ngClass]="{
-      'brown' : (data.eth + data.btc) > 5,
-      'gray' : (data.eth + data.btc) < 2
+      'brown' : (data.eth + data.btc) > 7,
+      'gray' : (data.eth + data.btc) < 1
      }">
   <p>wallet{{data.wallet}}</p>
   <p>name{{data.name}}</p>

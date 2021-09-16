@@ -25,13 +25,14 @@
 
 <div style="display: flex; flex-direction: row;">
   <div *ngFor="let transaction of transactions; let i = index;">
-
+<!-- 4. Cada transacción debe tener un botón con la palabra mine, con la diferencia que si es tipo PoS se debe habilitar el botón 
+solo si el atributo miner mayor a 5-->
     <app-transaction [data]="transaction">
       <button
         [disabled]="transaction.mineType === 'PoS' &&
-       transaction.miner < 20"
+       transaction.miner > 5"
       (click)="onMine(transaction)">
-        mine
+        Mine
       </button>
     </app-transaction>
   </div>
