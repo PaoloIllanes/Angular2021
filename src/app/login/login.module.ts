@@ -11,6 +11,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { AuthService } from './services/auth.service';
 
 const routes: Routes=[
   {path: '' , component: LoginComponent}
@@ -43,6 +44,7 @@ const routes: Routes=[
   providers: [
     NormalService,
     PublicationService,
+    AuthService
    
    
       

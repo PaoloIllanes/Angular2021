@@ -11,12 +11,24 @@
 
   <mat-card class="form">
     <mat-card-content style="display: flex; flex-direction: column;">
-        <input type="text" placeholder="Email address or phone number">
-        <input type="password" placeholder="Password">
+      <form #form="ngForm"
+      (ngSubmit)="submit(form)"
+      style="display: flex; flex-direction: column;">
+      
+        <input type="text"
+        name="email"
+        ngModel
+        placeholder="Email address or phone number">
+        <input type="password"
+        name="password"
+        ngModel
+         placeholder="Password">
         <button class="login-btn">Log In</button>
         <a href="">Forgot Password?</a>
         <div class="underline"></div>
         <button class="create-new-account-btn">Create New Account</button>
+
+      </form>
     </mat-card-content>
   </mat-card>
 

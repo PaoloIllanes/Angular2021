@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from './services/auth.service';
 import { NormalService } from './services/normal.service';
 import { PublicationService } from './services/publication.service';
 
@@ -21,7 +22,8 @@ formReactive: FormGroup;
   constructor(
     private normalService: NormalService,
     private publicationService: PublicationService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private authService:AuthService
   
     ){
 
@@ -36,28 +38,17 @@ formReactive: FormGroup;
   ngOnInit() {
     this.publicationService.getAll().subscribe(res=>{console.log('Response:',res)})
   }
-  getData(){
-    console.log(this.normalService.getData())
-
-  }
-  setData(data: number[]){
-    this.normalService.setData(data);
-  }
   
-  create(){this.publicationService.create({nombre:"hola"}).subscribe(res =>(console.log(res)))}
-  delete(){this.publicationService.delete("p002").subscribe(res =>(console.log(res)))}
-  
+submit(form:any){
 
-  onShow(){
-    console.log(this.name.value)
-  }
+  console.log("aaaaa",form);
+  this.authService.login({
+    email:form.value.email,
+    password:form.value.password,
+    returnSecureToken: true
 
-  onShowAll(){
-    console.log('DDDDD', this.formReactive.value)
-  }
-getValue(value:string){
-  return this.formReactive.get(value);
 
+  }).subscribe(res =>{console.log("response",res);})
 
 }
 
