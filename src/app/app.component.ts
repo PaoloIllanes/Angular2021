@@ -39,7 +39,7 @@ export class AppComponent {
   }
 
   getTransactionsStatus(): boolean {
-    const aux = this.transactions.filter(t => t.mineType === 'PoS' && t.miner < 20);
+    const aux = this.transactions.filter(t => t.mineType === 'PoS' && t.miner > 5);
     return this.transactions.length === aux.length;
   }
 
