@@ -1,0 +1,17 @@
+<div style="border: 1px solid red;"
+    [style.background]="data.mineType === 'PoW' ? 'yellow' : 'green'">
+  <!--9. Mostrar el atributo date en las transacciones según el siguiente formato 2021/12/31 (año/mes/dia)-->
+ <p>date: {{data.date | date: 'yyyy/MM/dd'}}</p>
+  <p>from: {{data.from}}</p>
+  <p>to: {{data.to}}</p>
+  <p>quantity: {{data.quantity}}</p>
+  <!-- 8. Mostrar el atributo moneyType con CamelCase  -->
+  <p>moneyType: {{data.moneyType | TitleCase}}</p>
+  <p>mineType: {{data.mineType}}</p>
+  <p>miner: {{data.miner}}</p>
+
+  <ng-content>
+
+  </ng-content>
+
+</div>

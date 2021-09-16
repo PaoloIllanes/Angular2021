@@ -1,12 +1,11 @@
 import {Injectable} from '@angular/core';
-import {environment} from "../../environments/environment";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 
 @Injectable()
 export class TransactionService {
 
-  private url = environment.app.apiBaseUrl;
+  private url = environment.app.apiBaseUrl
 
   constructor(private http: HttpClient) {
   }
