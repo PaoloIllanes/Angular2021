@@ -1,28 +1,20 @@
 {
   "publications": {
-    "p001":{
-      "id":2,
-      "description":"sadsadsad",
-      "date": "11/121/21",
-      "imgURL":"sdsadsadsadsad"
-
-
+    "-Miwzh8xnReDcESiBx_6": {
+      "category": "work",
+      "date": "17/82/2021",
+      "description": "soy nuevo",
+      "idUser": "PpqxlvrfhRcELvyb8IY6wjyQR5x2",
+      "imageUrl": "http://fitebase/img.jpg",
+      "userPhotoUrl": "http://fitebase/user1.jpg"
     },
-    "p002":{
-      "id":2,
-      "description":"sadsadsad",
-      "date": "11/121/21",
-      "imgURL":"sdsadsadsadsad"
-
-
-    },
-    "p003":{
-      "id":2,
-      "description":"sadsadsad",
-      "date": "11/121/21",
-      "imgURL":"sdsadsadsadsad"
-
-
+    "-MiwznqItZPETiI9B1DG": {
+      "category": "entertainment",
+      "date": "17/82/2021",
+      "description": "soy nuevo",
+      "idUser": 2,
+      "imageUrl": "http://fitebase/img.jpg",
+      "userPhotoUrl": "http://fitebase/user1.jpg"
     }
   }
 }

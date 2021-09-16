@@ -1,33 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
+import {AuthService} from "../../../core/services/auth.service";
+import {MatDialogRef} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(authService: AuthService,
-    public dialogRef:MatDialogRef<RegisterComponent>) { }
+  constructor(private authService: AuthService,
+              public dialogRef: MatDialogRef<RegisterComponent>) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
   onRegister(form:any){
-    console.log('Register',form);
     this.authService.signUp({
-
-      email:form.value.email,
-      password:form.value.password,
+      email: form.value.email,
+      password: form.value.password,
       returnSecureToken: true
-  
-  
-
-    }).subscribe(res => {console.log("register",res);
+    }).subscribe(() => {
       this.dialogRef.close();
-  })
-
+    })
   }
 
 }

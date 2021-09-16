@@ -4,13 +4,13 @@
 
 export const environment = {
   production: false,
-  app:{
-    apiBaseURL:"https://angular-facebook-ill-default-rtdb.firebaseio.com",
-
+  app: {
+    apiBaseUrl: "https://facebook-angular-course-default-rtdb.firebaseio.com"
   },
-  auth:{
-    apiBaseUrl:"https://identitytoolkit.googleapis.com"
-    ,apiKey:"AIzaSyDJbZwvAZE64tl0GNoRqyZ0qG76DKCzZVc"}
+  auth: {
+    apiBaseUrl: "https://identitytoolkit.googleapis.com",
+    key: "AIzaSyDJbZwvAZE64tl0GNoRqyZ0qG76DKCzZVc"
+  }
 };
 
 /*
